@@ -16,7 +16,7 @@ nav {
     width: 100vw;
     height: 12vh;
     display: flex;
-    background-color: #545454;
+    background-color: #BF8C8C;
     justify-content: center;
 }
 
@@ -38,33 +38,40 @@ nav #menu h4 {
 
 nav #menu #logoNavegacao {
     height: 15vh;
-    z-index: 2;
-    box-shadow: 1px 1px 21px 0px rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: 1px 1px 21px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 1px 1px 21px 0px rgba(0, 0, 0, 0.75);
+}
+
+.fotos {
+    display: none;
 }
 
 #conteudoHome {
     width: 100vw;
-    height: 82vh;
+    height: 100%;
+    overflow: hidden;
 }
 
 .carousel-container {
     width: 100vw;
-    height: 88vh;
+    height: 100%;
     overflow: hidden;
 }
 
 .carousel-slide {
     display: flex;
     width: 400vw;
+    height: 100%;
     animation: slide 25s infinite;
 }
 
 .carousel-slide img {
     width: 100vw;
     height: 88vh;
+    /* height: 100vh; */
     object-fit: cover;
+}
+
+.carousel-slide img .backgrond {
+    height: 100%;
 }
 
 @keyframes slide {
@@ -125,9 +132,19 @@ footer img {
 }
 
 @media (min-width: 100px) {
-    @media (max-width: 413px) {
+    @media (max-width: 650px) {
         .mobile {
             display: flex;
+        }
+
+        nav {
+            width: 100%;
+        }
+        
+        nav #menu {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
         }
 
         nav #menu h4 {
@@ -135,16 +152,25 @@ footer img {
         }
 
         nav #iconeMenuMobile {
-            position: absolute;
-            right: 1vw;
             height: 6vh;
+            z-index: 1;
+        }
+        
+        nav #iconeFechaMenuMobile {
+            display: none;   
+            height: 6vh;
+            z-index: 1;
         }
 
-        nav #iconeFechaMenuMobile {
-            display: none;
+        nav span{
+            color: #F4F8DC;
+            font-weight: bold;
+            width: 100vw;
+            display: flex;
             position: absolute;
-            right: 1vw;
-            height: 6vh;
+            justify-content: center;
+            font-size: large;
+            text-transform: uppercase;
         }
 
         #menuMobile {
@@ -156,7 +182,7 @@ footer img {
             height: 35vh;
             position: absolute;
             z-index: 1;
-            background-color: #545454;
+            background-color: #BF8C8C;
             right: 0;
             animation: entradaMenu 1s ease;
         }

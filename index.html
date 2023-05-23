@@ -17,37 +17,38 @@
 <body>
     <nav>
         <div id="menu">
-            <h4>Home</h4>
-            <h4>Fotos</h4>
-            <img src="img/LOGO.png" alt="Logo Love Sounds" id="logoNavegacao">
-            <h4>Sobre nós</h4>
-            <h4>Depoimentos</h4>
+            <h4 onclick="abreHome()">Home</h4>
+            <h4 onclick="abreFotos()">Fotos</h4>
+            <img src="img/LOGO2.png" alt="Logo Love Sounds" id="logoNavegacao">
+            <h4 onclick="abreSobre()">Sobre nós</h4>
+            <h4 onclick="abreDepoimentos()">Depoimentos</h4>
+            <span id="telaAtual" class="mobile">HOME</span>
             <img src="img/icon/menuMobile.svg" alt="iconeMenuMobile" class="mobile" id="iconeMenuMobile" onclick="abreMenuMobile()">
             <img src="img/icon/fechar.svg" alt="iconeFechaMenuMobile" class="mobile" id="iconeFechaMenuMobile" onclick="fechaMenuMobile()">
         </div>
     </nav>
     <section id="menuMobile" class="mobile">
         <section id="conteudoMenuMobile">
-            <div id="menuMobileHome" class="linhaMenuMobile">
+            <div id="menuMobileHome" class="linhaMenuMobile" onclick="abreHome()">
                 <img src="img/icon/home.svg" alt="Home" class="iconeMenuMobile">
                 <h4>Home</h4>
             </div>
-            <div id="menuMobileFotos" class="linhaMenuMobile">
+            <div id="menuMobileFotos" class="linhaMenuMobile" onclick="abreFotos()">
                 <img src="img/icon/camera.svg" alt="Fotos" class="iconeMenuMobile">
                 <h4>Fotos</h4>
             </div>
-            <div id="menuMobileSobreNos" class="linhaMenuMobile">
+            <div id="menuMobileSobreNos" class="linhaMenuMobile" onclick="abreSobre()">
                 <img src="img/icon/violao.svg" alt="Sobre Nós" class="iconeMenuMobile">
                 <h4>Sobre nós</h4>
             </div>
-            <div id="menuMobileDepoimentos" class="linhaMenuMobile">
+            <div id="menuMobileDepoimentos" class="linhaMenuMobile" onclick="abreDepoimentos()">
                 <img src="img/icon/depoimento.svg" alt="Depoimentos" class="iconeMenuMobile">
                 <h4>Depoimentos</h4>
             </div>
             </div>
         </section>
     </section>
-    <section id="conteudoHome">
+    <section id="conteudoHome" class="home">
         <div class="carousel-container">
             <div class="carousel-slide">
                 <img src="img/aquino-trompete.jpg" alt="background" class="background">
@@ -62,6 +63,15 @@
         <section id="fraseHome" class="centralizarFrase">
             <h1>"Sua trilha perfeita para o amor"</h1>
         </section>
+    </section>
+    <section id="conteudoFotos" class="fotos">
+        <h1>Fotos</h1>
+    </section>
+    <section id="conteudoSobre" class="sobre">
+        <h1>Sobre Nós</h1>
+    </section>
+    <section id="conteudoDepoimentos" class="depoimentos">
+        <h1>Depoimentos</h1>
     </section>
     <footer>
         <a href="https://instagram.com/_lovesounds_" target="_blank"><img src="img/icon/insta.svg" width="30vw"

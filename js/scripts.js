@@ -19,19 +19,65 @@ setInterval(() => {
 }, 500);
 
 function abreMenuMobile() {
-    const menu = document.querySelector('#menuMobile');
-    const btnabre = document.querySelector('#iconeMenuMobile');
-    const btnfecha = document.querySelector('#iconeFechaMenuMobile');
-    menu.style.display = 'flex';
-    btnabre.style.display = 'none';
-    btnfecha.style.display = 'flex';
+  const menu = document.querySelector('#menuMobile');
+  const btnabre = document.querySelector('#iconeMenuMobile');
+  const btnfecha = document.querySelector('#iconeFechaMenuMobile');
+  menu.style.display = 'flex';
+  btnabre.style.display = 'none';
+  btnfecha.style.display = 'flex';
 }
 
 function fechaMenuMobile() {
-    const menu = document.querySelector('#menuMobile');
-    const btnabre = document.querySelector('#iconeMenuMobile');
-    const btnfecha = document.querySelector('#iconeFechaMenuMobile');
-    menu.style.display = 'none';
-    btnabre.style.display = 'flex';
-    btnfecha.style.display = 'none';
+  const menu = document.querySelector('#menuMobile');
+  const btnabre = document.querySelector('#iconeMenuMobile');
+  const btnfecha = document.querySelector('#iconeFechaMenuMobile');
+  menu.style.display = 'none';
+  btnabre.style.display = 'flex';
+  btnfecha.style.display = 'none';
+}
+
+function maeparTelas() {
+  const home = document.querySelector(".home");
+  const fotos = document.querySelector(".fotos");
+  const sobre = document.querySelector(".sobre");
+  const depoimentos = document.querySelector(".depoimentos");
+  const telaAtual = document.querySelector("#telaAtual");
+
+  return [home, fotos, sobre, depoimentos, telaAtual];
+}
+
+function abreHome() {
+  const telas = maeparTelas();
+  telas[0].style.display = 'flex';
+  telas[1].style.display = 'none';
+  telas[2].style.display = 'none';
+  telas[3].style.display = 'none';
+  telaAtual.textContent = 'home';
+}
+
+function abreFotos() {
+  const telas = maeparTelas();
+  telas[0].style.display = 'none';
+  telas[1].style.display = 'flex';
+  telas[2].style.display = 'none';
+  telas[3].style.display = 'none';
+  telaAtual.textContent = 'fotos';
+}
+
+function abreSobre() {
+  const telas = maeparTelas();
+  telas[0].style.display = 'none';
+  telas[1].style.display = 'none';
+  telas[2].style.display = 'flex';
+  telas[3].style.display = 'none';
+  telaAtual.textContent = 'Sobre Nós';
+}
+
+function abreDepoimentos() {
+  const telas = maeparTelas();
+  telas[0].style.display = 'none';
+  telas[1].style.display = 'none';
+  telas[2].style.display = 'none';
+  telas[3].style.display = 'flex';
+  telaAtual.textContent = 'depoimentos';
 }
