@@ -44,6 +44,14 @@ nav #menu #logoNavegacao {
     display: none;
 }
 
+.sobre {
+    display: none;
+}
+
+.depoimentos {
+    display: none;
+}
+
 #conteudoHome {
     width: 100vw;
     height: 100%;
