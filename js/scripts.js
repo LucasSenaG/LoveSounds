@@ -37,49 +37,45 @@ function fechaMenuMobile() {
 }
 
 function maeparTelas() {
-  const home = document.querySelector(".home");
-  const fotos = document.querySelector(".fotos");
-  const sobre = document.querySelector(".sobre");
-  const depoimentos = document.querySelector(".depoimentos");
-  const telaAtual = document.querySelector("#telaAtual");
-
-  return [home, fotos, sobre, depoimentos, telaAtual];
+  const telas = document.querySelectorAll('.nomeTela');
+  return telas;
 }
 
 function abreHome() {
-  // const telas = maeparTelas();
-  // telas[0].style.display = 'flex';
-  // telas[1].style.display = 'none';
-  // telas[2].style.display = 'none';
-  // telas[3].style.display = 'none';
+  const telas = maeparTelas();
+  console.log(telas);
+  telas[0].style.opacity = 1;
+  telas[1].style.opacity = 0.5;
+  telas[2].style.opacity = 0.5;
+  telas[3].style.opacity = 0.5;
   telaAtual.textContent = 'home';
 }
 
 function abreFotos() {
   const telas = maeparTelas();
-  // telas[0].style.display = 'none';
-  // telas[1].style.display = 'flex';
-  // telas[2].style.display = 'none';
-  // telas[3].style.display = 'none';
+  telas[1].style.opacity = 1;
+  telas[0].style.opacity = 0.5;
+  telas[2].style.opacity = 0.5;
+  telas[3].style.opacity = 0.5;
   telaAtual.textContent = 'fotos';
-}
-
-function abreSobre() {
-  const telas = maeparTelas();
-  // telas[0].style.display = 'none';
-  // telas[1].style.display = 'none';
-  // telas[2].style.display = 'flex';
-  // telas[3].style.display = 'none';
-  telaAtual.textContent = 'Sobre Nós';
 }
 
 function abreDepoimentos() {
   const telas = maeparTelas();
-  // telas[0].style.display = 'none';
-  // telas[1].style.display = 'none';
-  // telas[2].style.display = 'none';
-  // telas[3].style.display = 'flex';
+  telas[2].style.opacity = 1;
+  telas[0].style.opacity = 0.5;
+  telas[1].style.opacity = 0.5;
+  telas[3].style.opacity = 0.5;
   telaAtual.textContent = 'depoimentos';
+}
+
+function abreSobre() {
+  const telas = maeparTelas();
+  telas[3].style.opacity = 1;
+  telas[0].style.opacity = 0.5;
+  telas[1].style.opacity = 0.5;
+  telas[2].style.opacity = 0.5;
+  telaAtual.textContent = 'Sobre Nós';
 }
 
 // CARROSSEL FOTOS

@@ -48,6 +48,10 @@ nav #menu a {
     text-decoration: none;
 }
 
+.nomeTela {
+    transition: 0.5s ease-in-out;
+}
+
 section {
     overflow: hidden;
 }
