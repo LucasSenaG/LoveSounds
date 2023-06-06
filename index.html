@@ -6,25 +6,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta author="Girundi, Lucas">
-    <meta name="keywords"
-        content="casamento, banda, música, musica, banda casamento, música casamento, grupo musical, cerimonia">
+    <meta name="keywords" content="casamento, banda, música, musica, banda casamento, música casamento, grupo musical, cerimonia">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Love Sounds</title>
     <link rel="icon" href="img/LOGO2.png">
     <link rel="stylesheet" href="css\style.css">
-
 </head>
 
 <body>
     <nav>
         <div id="menu">
-            <h4 onclick="abreHome()">Home</h4>
-            <h4 onclick="abreFotos()">Fotos</h4>
+            <a href="#conteudoHome">
+                <h4 onclick="abreHome()">Home</h4>
+            </a>
+            <a href="#conteudoFotos">
+                <h4 onclick="abreFotos()">Fotos</h4>
+            </a>
             <img src="img/LOGO2.png" alt="Logo Love Sounds" id="logoNavegacao">
-            <h4 onclick="abreSobre()">Sobre nós</h4>
-            <h4 onclick="abreDepoimentos()">Depoimentos</h4>
+            <a href="#conteudoDepoimentos">
+                <h4 onclick="abreDepoimentos()">Depoimentos</h4>
+            </a>
+            <a href="#conteudoSobre">
+                <h4 onclick="abreSobre()">Sobre nós</h4>
+            </a>
             <span id="telaAtual" class="mobile">HOME</span>
-            <img src="img/icon/menuMobile.svg" alt="iconeMenuMobile" class="mobile" id="iconeMenuMobile" onclick="abreMenuMobile()">
-            <img src="img/icon/fechar.svg" alt="iconeFechaMenuMobile" class="mobile" id="iconeFechaMenuMobile" onclick="fechaMenuMobile()">
+            <img src="img/icon/menuMobile.svg" alt="iconeMenuMobile" class="mobile" id="iconeMenuMobile"
+                onclick="abreMenuMobile()">
+            <img src="img/icon/fechar.svg" alt="iconeFechaMenuMobile" class="mobile" id="iconeFechaMenuMobile"
+                onclick="fechaMenuMobile()">
         </div>
     </nav>
     <section id="menuMobile" class="mobile">
@@ -37,13 +48,13 @@
                 <img src="img/icon/camera.svg" alt="Fotos" class="iconeMenuMobile">
                 <h4>Fotos</h4>
             </div>
-            <div id="menuMobileSobreNos" class="linhaMenuMobile" onclick="abreSobre()">
-                <img src="img/icon/violao.svg" alt="Sobre Nós" class="iconeMenuMobile">
-                <h4>Sobre nós</h4>
-            </div>
             <div id="menuMobileDepoimentos" class="linhaMenuMobile" onclick="abreDepoimentos()">
                 <img src="img/icon/depoimento.svg" alt="Depoimentos" class="iconeMenuMobile">
                 <h4>Depoimentos</h4>
+            </div>
+            <div id="menuMobileSobreNos" class="linhaMenuMobile" onclick="abreSobre()">
+                <img src="img/icon/violao.svg" alt="Sobre Nós" class="iconeMenuMobile">
+                <h4>Sobre nós</h4>
             </div>
             </div>
         </section>
@@ -64,23 +75,148 @@
             <h1>"Sua trilha perfeita para o amor"</h1>
         </section>
     </section>
+    <footer>
+        <a href="https://youtube.com" target="_blank"><i class="fa-brands fa-youtube" style="color: #fafafa;"></i></a>
+        <a href="https://open.spotify.com/search/lovesounds" target="_blank"><i class="fa-brands fa-spotify"
+                style="color: #fafafa;"></i></a>
+        <a href="https://api.whatsapp.com/send?phone=31996352605" target="_blank"><i class="fa-brands fa-whatsapp"
+                style="color: #fafafa;"></i></a>
+        <a href="https://instagram.com/_lovesounds_" target="_blank"><i class="fa-brands fa-instagram"
+                style="color: #fafafa;"></i></a>
+    </footer>
     <section id="conteudoFotos" class="fotos">
-        <h1>Fotos</h1>
-    </section>
-    <section id="conteudoSobre" class="sobre">
-        <h1>Sobre Nós</h1>
+        <div id="cor"></div>
+        <div class="container-fotos">
+            <button class="arrow-left control" aria-label="Previous image">◀</button>
+            <button class="arrow-right control" aria-label="Next Image">▶</button>
+            <div class="gallery-wrapper">
+              <div class="gallery">
+                <img src="https://source.unsplash.com/random/550x250/?band" alt="" class="item current-item">
+                <img src="https://source.unsplash.com/random/550x250/?music" alt="" class="item current-item">
+                <img src="https://source.unsplash.com/random/550x250/?marriage" alt="" class="item current-item">
+                <img src="https://source.unsplash.com/random/550x250/?romantic-music" alt="" class="item current-item">
+                <img src="https://source.unsplash.com/random/550x250/?flowers" alt="" class="item current-item">
+                <img src="https://source.unsplash.com/random/550x250/?guitar" alt="" class="item current-item">
+                <img src="https://source.unsplash.com/random/550x250/?violin" alt="" class="item current-item">
+                <img src="https://source.unsplash.com/random/550x250/?romantic-band" alt="" class="item current-item">
+                <img src="https://source.unsplash.com/random/550x250/?marriage-band" alt="" class="item current-item">
+              </div>
+            </div>
+          </div>
     </section>
     <section id="conteudoDepoimentos" class="depoimentos">
-        <h1>Depoimentos</h1>
+        <div id="tituloDepoimentos" class="titulossessoes">
+            <h1>Depoimentos</h1>
+        </div>
+        <section id="carrosselDepoimentos">
+            <section class="cardDepoimento">
+                <h2>Nome do casal</h2>
+                <span>Nota</span>
+                <h5>"Não poderíamos estar mais felizes por ter escolhido o Love
+                    Sounds para tocar no nosso casamento. A música deles foi
+                    simplesmente perfeita, criando uma atmosfera mágica e
+                    emocionante. Todos os nossos convidados elogiaram a
+                    performance e disseram que foi uma das melhores bandas de
+                    casament que já ouviram. Recomendamos de olhos fechados!"</h5>
+            </section>
+            <section class="cardDepoimento">
+                <h2>Nome do casal</h2>
+                <span>Nota</span>
+                <h5>"Não poderíamos estar mais felizes por ter escolhido o Love
+                    Sounds para tocar no nosso casamento. A música deles foi
+                    simplesmente perfeita, criando uma atmosfera mágica e
+                    emocionante. Todos os nossos convidados elogiaram a
+                    performance e disseram que foi uma das melhores bandas de
+                    casament que já ouviram. Recomendamos de olhos fechados!"</h5>
+            </section>
+            <section class="cardDepoimento">
+                <h2>Nome do casal</h2>
+                <span>Nota</span>
+                <h5>"Não poderíamos estar mais felizes por ter escolhido o Love
+                    Sounds para tocar no nosso casamento. A música deles foi
+                    simplesmente perfeita, criando uma atmosfera mágica e
+                    emocionante. Todos os nossos convidados elogiaram a
+                    performance e disseram que foi uma das melhores bandas de
+                    casament que já ouviram. Recomendamos de olhos fechados!"</h5>
+            </section>
+            <section class="cardDepoimento">
+                <h2>Nome do casal</h2>
+                <span>Nota</span>
+                <h5>"Não poderíamos estar mais felizes por ter escolhido o Love
+                    Sounds para tocar no nosso casamento. A música deles foi
+                    simplesmente perfeita, criando uma atmosfera mágica e
+                    emocionante. Todos os nossos convidados elogiaram a
+                    performance e disseram que foi uma das melhores bandas de
+                    casament que já ouviram. Recomendamos de olhos fechados!"</h5>
+            </section>
+        </section>
+        <div id="botaolink">
+            <a href="https://www.casamentos.com.br" target="_blank">
+                <h3>ver mais em <b>casamento.com.br</b></h3>
+            </a>
+        </div>
     </section>
-    <footer>
-        <a href="https://instagram.com/_lovesounds_" target="_blank"><img src="img/icon/insta.svg" width="30vw"
-                alt="Instagram"></a>
-        <a href="https://api.whatsapp.com/send?phone=31996352605" target="_blank"><img src="img/icon/whatsapp.svg"
-                width="30vw" alt="Whatsapp"></a>
-        <a href="https://open.spotify.com/search/lovesounds" target="_blank"><img src="img/icon/spotify.svg"
-                width="30vw" alt="Spotify"></a>
-    </footer>
+    <section id="conteudoSobre" class="sobre">
+        <div id="tituloSobreNos" class="titulossessoes">
+            <h1>Sobre Nós</h1>
+        </div>
+        <div id="imgetexto">
+
+            <section class="coluna1">
+                <div id="imgSobreNos">
+                    <img src="img/aquino-trompete.jpg" alt="Músico tocando trompete">
+                </div>
+                <div id="redessociais">
+                    <a href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube"
+                            style="color: #000;"></i></a>
+                    <a href="https://www.spotify.com" target="_blank"><i class="fa-brands fa-spotify"
+                            style="color: #000;"></i></a>
+                    <a href="https://www.whatsapp.com" target="_blank"><i class="fa-brands fa-whatsapp"
+                            style="color: #000;"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"
+                            style="color: #000;"></i></a>
+                </div>
+            </section>
+            <section class="coluna2">
+                <h5>
+                    <p>"Não poderíamos estar mais felizes por ter escolhido o Love
+                        Sounds para tocar no nosso casamento. A música deles foi
+                        simplesmente perfeita, criando uma atmosfera mágica e
+                        emocionante. Todos os nossos convidados elogiaram a
+                        performance e disseram que foi uma das melhores bandas de
+                        casamento que já ouviram. Recomendamos de olhos
+                        fechados!" - Ana e Marcos
+                    </p>
+                    <p>"O Love Sounds tornou o nosso dia ainda mais especial. Eles
+                        capturaram perfeitamente o espírito do nosso casamento e a
+                        emoção que estávamos sentindo. A seleção musical foi
+                        incrível e eles tocaram todas as nossas músicas favoritas. Não
+                        poderíamos ter pedido por um grupo melhor. Muito obrigado,
+                        Love Sounds!" - Juliana e Pedro
+                    </p>
+                    <p>"Estamos encantados com o talento e profissionalismo do
+                        Love Sounds. Eles foram extremamente flexíveis e atenciosos
+                        durante todo o processo de planejamento, garantindo que
+                        nossos desejos e preferências fossem levados em
+                        consideração. Eles conseguiram transformar nossa festa de
+                        casamento em uma verdadeira celebração. Todos os
+                        convidados estavam dançando e se divertindo a noite toda.
+                        Não podemos agradecer o suficiente!"
+                    </p>
+                </h5>
+            </section>
+        </div>
+    </section>
+    <section id="conteudoContato" class="contato">
+        <div id="cor"></div>
+        <div class="titulossessoes">
+            <h1>Contatos</h1>
+        </div>
+        <div id="telefoneLogo">
+            <div id="telefone"></div>
+            <div id="logoContato"></div>
+        </div>
+    </section>
 
     <script src="js/scripts.js"></script>
 </body>

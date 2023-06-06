@@ -13,15 +13,19 @@
 }
 
 nav {
-    width: 100vw;
+    width: 100%;
     height: 12vh;
     display: flex;
     background-color: #BF8C8C;
     justify-content: center;
+    position: fixed;
+    z-index: 2;
+    overflow: hidden;
+    top: 0;
 }
 
 nav #menu {
-    width: 80vw;
+    width: 50vw;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -37,25 +41,194 @@ nav #menu h4 {
 }
 
 nav #menu #logoNavegacao {
-    height: 15vh;
+    height: 35vh;
+}
+
+nav #menu a {
+    text-decoration: none;
+}
+
+section {
+    overflow: hidden;
+}
+
+footer i{
+    font-size: 40px;
+    margin: 0 1vw;
 }
 
 .fotos {
-    display: none;
+    display: flex;
+    /* padding-top: 12vh; */
+    width: 100%;
+    height: 85vh;
 }
 
-.sobre {
+#conteudoFotos {
+    width: 100vw;
+    height: 100vh;
+    background: url(../img/aquino-trompete.jpg);
+    background-size: contain;
+}
+
+#conteudoFotos #cor {
+    width: 100%;
+    height: 100%;
+    background-color: #BF8C8C;
+    opacity: 0.8;
+    position: absolute;
+}
+
+/* CARROSEL DE FOTOS - INICIO */
+.container-fotos {
+    position: relative;
+    padding: 15px;
+    margin: 0 auto;
+    width: 90vw;
+    height: 30vh;
+    margin-top: 15vh;
+  }
+  
+  .gallery-wrapper {
+    overflow-x: auto;
+  }
+  
+  .arrow-left,
+  .arrow-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: auto;
+    bottom: 0;
+    font-size: 20px;
+    line-height: 250px;
+    width: 40px;
+    color: #fff;
+    transition: all 600ms ease-in-out;
+    background: linear-gradient(to left, transparent 0%, black 200%);
+    opacity: 0.1;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .arrow-left:hover,
+  .arrow-right:hover {
+    opacity: 1;
+  }
+  
+  .arrow-right {
+    right: 0;
+    left: auto;
+    text-align: right;
+    background: linear-gradient(to right, transparent 0%, black 200%);
+  }
+  
+  .gallery {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 15px;
+  }
+  
+  .item {
+    width: 550px;
+    height: 250px;
+    flex-shrink: 0;
+    transition: all 600ms ease-in-out;
+    opacity: 0.5;
+  }
+  
+  .current-item {
+    opacity: 1;
+  }
+  
+  /* This is from w3schools */
+  /* 
+  https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .gallery-wrapper::-webkit-scrollbar {
     display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .gallery-wrapper {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+/* ACABOU AQUI O CARROSSEL DE FOTOS */
+
+.sobre {
+    display: flex;
+    padding-top: 12vh;
+    width: 100%;
+    height: 85vh;
 }
 
 .depoimentos {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    padding-top: 12vh;
+    width: 100%;
+    height: 85vh;
+}
+
+.titulossessoes {
+    margin-left: 5vw;
+    text-transform: uppercase;
+    opacity: 0.6;
+    padding: 4vh 0;
+    border-bottom: 4px solid #BF8C8C;
+    width: 12vw;
+    height: 4vh;
+}
+
+section h1 {
+    font-weight: 500;
+    font-size: xx-large;
+    width: 20vw;
+    height: 5vh;
+}
+
+.depoimentos #carrosselDepoimentos {
+    display: flex;
+}
+
+.depoimentos #carrosselDepoimentos .cardDepoimento {
+    width: 500px;
+    border: 2px solid red;
+    margin-top: 50px;
+}
+
+.depoimentos #botaolink {
+    width: 100vw;
+    position: relative;
+    margin-top: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.depoimentos a {
+    background-color: #BF8C8C;
+    width: 25vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    height: 5vh;
+    text-decoration: none;
+}
+
+.depoimentos a h3 {
+    color: #F4F8DC;
+    font-weight: 400;
 }
 
 #conteudoHome {
-    width: 100vw;
+    width: 100%;
     height: 100%;
+    padding-top: 12vh;
     overflow: hidden;
+    background-color: green;
 }
 
 .carousel-container {
@@ -74,13 +247,77 @@ nav #menu #logoNavegacao {
 .carousel-slide img {
     width: 100vw;
     height: 88vh;
-    /* height: 100vh; */
     object-fit: cover;
 }
 
 .carousel-slide img .backgrond {
     height: 100%;
 }
+
+.sobre {
+    display: flex;
+    flex-direction: column;
+}
+
+.sobre #imgetexto {
+    box-sizing: border-box;
+    margin-top: 5vh;
+    display: flex;
+    width: 100vw;
+    height: 60vh;
+    left: 0px;
+    padding: 0 4vw;
+    justify-content: flex-start;
+}
+
+.sobre .coluna1 {
+    width: 50%;
+    margin-right: 3vw;
+}
+
+.sobre .coluna1 #imgSobreNos {
+    display: flex;
+    height: 50vh;
+}
+
+.sobre .coluna1 #redessociais {
+    width: 37vw;
+    height: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3.5vh;
+}
+
+.sobre .coluna1 #redessociais i {
+    font-size: 50px;
+    margin: 0px 1vw;
+}
+
+.sobre .coluna2 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.sobre .coluna2 h5 {
+    position: absolute;
+    overflow: visible;
+    width: 48vw;
+    height: 70vh;
+    margin-top: -15vh;
+}
+
+.sobre .coluna2 p {
+    margin: 2vh 0;
+    font-size: 1.56em;
+    font-weight: 300;
+    text-align: justify;
+}
+
 
 @keyframes slide {
     0% {
@@ -105,7 +342,7 @@ nav #menu #logoNavegacao {
 }
 
 #conteudoHome .centralizarFrase {
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -120,19 +357,38 @@ nav #menu #logoNavegacao {
     font-size: xx-large;
     text-shadow: -3px 0px 10px #000000;
     font-family: 'typewriter';
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 footer {
     position: absolute;
     bottom: 5vh;
     display: flex;
-    width: 100vw;
+    width: 100%;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 footer img {
     margin: 0 1vw;
+}
+
+.contato {
+    background: url('../img/aquino-trompete.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+}
+
+.contato #cor{
+    position: absolute;
+    background-color: #b95e5e;
+    opacity: 0.5;
+    width: 100%;
+    height: 80vh;
 }
 
 .mobile {
@@ -148,7 +404,7 @@ footer img {
         nav {
             width: 100%;
         }
-        
+
         nav #menu {
             display: flex;
             justify-content: space-between;
@@ -163,14 +419,14 @@ footer img {
             height: 6vh;
             z-index: 1;
         }
-        
+
         nav #iconeFechaMenuMobile {
-            display: none;   
+            display: none;
             height: 6vh;
             z-index: 1;
         }
 
-        nav span{
+        nav span {
             color: #F4F8DC;
             font-weight: bold;
             width: 100vw;
@@ -203,7 +459,7 @@ footer img {
             height: 30vh;
         }
 
-        #conteudoMenuMobile .linhaMenuMobile{
+        #conteudoMenuMobile .linhaMenuMobile {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -229,7 +485,7 @@ footer img {
             }
         }
 
-        #conteudoHome .centralizarFrase h1{
+        #conteudoHome .centralizarFrase h1 {
             letter-spacing: 0px;
             font-size: x-large;
         }
@@ -242,4 +498,10 @@ footer img {
             margin: 0 5vw;
         }
     }
+}
+
+@media (min-width: 1920px) {
+    .sobre .coluna2 p {
+        font-size: 2.2em;
+    } 
 }
