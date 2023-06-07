@@ -6,12 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta author="Girundi, Lucas">
-    <meta name="keywords" content="casamento, banda, música, musica, banda casamento, música casamento, grupo musical, cerimonia">
+    <meta name="keywords"
+        content="casamento, banda, música, musica, banda casamento, música casamento, grupo musical, cerimonia">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Love Sounds</title>
     <link rel="icon" href="img/LOGO2.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css\style.css">
 </head>
 
@@ -86,23 +88,24 @@
     </footer>
     <section id="conteudoFotos" class="fotos">
         <div id="cor"></div>
-        <div class="container-fotos">
-            <button class="arrow-left control" aria-label="Previous image">◀</button>
-            <button class="arrow-right control" aria-label="Next Image">▶</button>
-            <div class="gallery-wrapper">
-              <div class="gallery">
-                <img src="https://source.unsplash.com/random/550x250/?band" alt="" class="item current-item">
-                <img src="https://source.unsplash.com/random/550x250/?music" alt="" class="item current-item">
-                <img src="https://source.unsplash.com/random/550x250/?marriage" alt="" class="item current-item">
-                <img src="https://source.unsplash.com/random/550x250/?romantic-music" alt="" class="item current-item">
-                <img src="https://source.unsplash.com/random/550x250/?flowers" alt="" class="item current-item">
-                <img src="https://source.unsplash.com/random/550x250/?guitar" alt="" class="item current-item">
-                <img src="https://source.unsplash.com/random/550x250/?violin" alt="" class="item current-item">
-                <img src="https://source.unsplash.com/random/550x250/?romantic-band" alt="" class="item current-item">
-                <img src="https://source.unsplash.com/random/550x250/?marriage-band" alt="" class="item current-item">
-              </div>
-            </div>
-          </div>
+        <div id="slider">
+            <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" slides-per-view="3"
+                space-between="30" free-mode="true">
+                <swiper-slide><img src="https://source.unsplash.com/random/1920x1080/?love" alt="Amor"></swiper-slide>
+                <swiper-slide><img src="https://source.unsplash.com/random/1920x1080/?band" alt="Banda"></swiper-slide>
+                <swiper-slide><img src="https://source.unsplash.com/random/1920x1080/?casamento" alt="Casamento"></swiper-slide>
+                <swiper-slide><img src="https://source.unsplash.com/random/1920x1080/?music" alt="Musica"></swiper-slide>
+                <swiper-slide><img src="https://source.unsplash.com/random/1920x1080/?noiva" alt="Noiva"></swiper-slide>
+                <swiper-slide><img src="https://source.unsplash.com/random/1920x1080/?noivo" alt="Noivo"></swiper-slide>
+                <swiper-slide><img src="https://source.unsplash.com/random/1920x1080/?casamento-festa" alt="Festa casamento"></swiper-slide>
+                <swiper-slide><img src="https://source.unsplash.com/random/1920x1080/?romantico" alt="Romantico"></swiper-slide>
+            </swiper-container>
+        </div>
+        <div id="videos">
+            <img src="https://source.unsplash.com/random/1920x1080/?drum" alt="">
+            <img src="https://source.unsplash.com/random/1920x1080/?guitarra" alt="">
+            <img src="https://source.unsplash.com/random/1920x1080/?violin" alt="">
+        </div>
     </section>
     <section id="conteudoDepoimentos" class="depoimentos">
         <div id="tituloDepoimentos" class="titulossessoes">
@@ -218,6 +221,7 @@
         </div>
     </section>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
     <script src="js/scripts.js"></script>
 </body>
 

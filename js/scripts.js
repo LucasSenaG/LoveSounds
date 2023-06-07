@@ -45,36 +45,36 @@ function abreHome() {
   const telas = maeparTelas();
   console.log(telas);
   telas[0].style.opacity = 1;
-  telas[1].style.opacity = 0.5;
-  telas[2].style.opacity = 0.5;
-  telas[3].style.opacity = 0.5;
+  telas[1].style.opacity = 0.3;
+  telas[2].style.opacity = 0.3;
+  telas[3].style.opacity = 0.3;
   telaAtual.textContent = 'home';
 }
 
 function abreFotos() {
   const telas = maeparTelas();
   telas[1].style.opacity = 1;
-  telas[0].style.opacity = 0.5;
-  telas[2].style.opacity = 0.5;
-  telas[3].style.opacity = 0.5;
+  telas[0].style.opacity = 0.3;
+  telas[2].style.opacity = 0.3;
+  telas[3].style.opacity = 0.3;
   telaAtual.textContent = 'fotos';
 }
 
 function abreDepoimentos() {
   const telas = maeparTelas();
   telas[2].style.opacity = 1;
-  telas[0].style.opacity = 0.5;
-  telas[1].style.opacity = 0.5;
-  telas[3].style.opacity = 0.5;
+  telas[0].style.opacity = 0.3;
+  telas[1].style.opacity = 0.3;
+  telas[3].style.opacity = 0.3;
   telaAtual.textContent = 'depoimentos';
 }
 
 function abreSobre() {
   const telas = maeparTelas();
   telas[3].style.opacity = 1;
-  telas[0].style.opacity = 0.5;
-  telas[1].style.opacity = 0.5;
-  telas[2].style.opacity = 0.5;
+  telas[0].style.opacity = 0.3;
+  telas[1].style.opacity = 0.3;
+  telas[2].style.opacity = 0.3;
   telaAtual.textContent = 'Sobre Nós';
 }
 
