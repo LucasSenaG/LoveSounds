@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta author="Girundi, Lucas">
+    <meta author="Lucas Girundi">
     <meta name="keywords"
         content="casamento, banda, música, musica, banda casamento, música casamento, grupo musical, cerimonia">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -26,7 +26,7 @@
             <a href="#conteudoFotos">
                 <h4 onclick="abreFotos()" id="fotos" class="nomeTela">Fotos</h4>
             </a>
-            <img src="img/LOGO2.png" alt="Logo Love Sounds" id="logoNavegacao">
+            <img src="img/LOGO2.png" alt="Logo Love Sounds" id="logoNavegacao"/>
             <a href="#conteudoDepoimentos">
                 <h4 onclick="abreDepoimentos()" id="depoimentos" class="nomeTela">Depoimentos</h4>
             </a>
@@ -91,25 +91,49 @@
         <div id="slider">
             <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" slides-per-view="3"
                 space-between="30" free-mode="true">
-                <swiper-slide><img src="https://source.unsplash.com/random/1920x1080/?love" alt="Amor"></swiper-slide>
-                <swiper-slide><img src="https://source.unsplash.com/random/1920x1080/?band" alt="Banda"></swiper-slide>
-                <swiper-slide><img src="https://source.unsplash.com/random/1920x1080/?casamento"
-                        alt="Casamento"></swiper-slide>
-                <swiper-slide><img src="https://source.unsplash.com/random/1920x1080/?music"
-                        alt="Musica"></swiper-slide>
-                <swiper-slide><img src="https://source.unsplash.com/random/1920x1080/?noiva" alt="Noiva"></swiper-slide>
-                <swiper-slide><img src="https://source.unsplash.com/random/1920x1080/?noivo" alt="Noivo"></swiper-slide>
-                <swiper-slide><img src="https://source.unsplash.com/random/1920x1080/?casamento-festa"
-                        alt="Festa casamento"></swiper-slide>
-                <swiper-slide><img src="https://source.unsplash.com/random/1920x1080/?romantico"
-                        alt="Romantico"></swiper-slide>
+                <swiper-slide>
+                    <img src="https://source.unsplash.com/random/1920x1080/?love" alt="Amor" class="desktop">
+                    <img src="https://source.unsplash.com/random/1080x1920/?love" alt="Amor" class="mobile">
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="https://source.unsplash.com/random/1920x1080/?band" alt="Banda" class="desktop">
+                    <img src="https://source.unsplash.com/random/1080x1920/?band" alt="Banda" class="mobile">
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="https://source.unsplash.com/random/1920x1080/?casamento" alt="Casamento" class="desktop">
+                    <img src="https://source.unsplash.com/random/1080x1920/?casamento" alt="Casamento" class="mobile">
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="https://source.unsplash.com/random/1920x1080/?music" alt="Musica" class="desktop">
+                    <img src="https://source.unsplash.com/random/1080x1920/?music" alt="Musica" class="mobile">
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="https://source.unsplash.com/random/1920x1080/?noiva" alt="Noiva" class="desktop">
+                    <img src="https://source.unsplash.com/random/1080x1920/?noiva" alt="Noiva" class="mobile">
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="https://source.unsplash.com/random/1920x1080/?noivo" alt="Noivo" class="desktop">
+                    <img src="https://source.unsplash.com/random/1080x1920/?noivo" alt="Noivo" class="mobile">
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="https://source.unsplash.com/random/1920x1080/?casamento-festa" alt="Festa casamento" class="desktop">
+                    <img src="https://source.unsplash.com/random/1080x1920/?casamento-festa" alt="Festa casamento" class="mobile">
+                    </swiper-slide>
+                <swiper-slide>
+                    <img src="https://source.unsplash.com/random/1920x1080/?romantico" alt="Romantico" class="desktop">
+                    <img src="https://source.unsplash.com/random/1080x1920/?romantico" alt="Romantico" class="mobile">
+                    </swiper-slide>
             </swiper-container>
         </div>
     </section>
         <div id="videos">
-            <a href=""><img src="https://source.unsplash.com/random/1920x1080/?drum" alt=""></a>
-            <a href=""><img src="https://source.unsplash.com/random/1920x1080/?guitar" alt=""></a>
-            <a href=""><img src="https://source.unsplash.com/random/1920x1080/?violin" alt=""></a>
+            <a href=""><img src="https://source.unsplash.com/random/1280x720/?drum" alt="Vídeo" class="desktop"></a>
+            <a href=""><img src="https://source.unsplash.com/random/1280x720/?guitar" alt="Vídeo" class="desktop"></a>
+            <a href=""><img src="https://source.unsplash.com/random/1280x720/?violin" alt="Vídeo" class="desktop"></a>
+
+            <a href=""><img src="https://source.unsplash.com/random/720x1280/?drum" alt="Vídeo" class="mobile"></a>
+            <a href=""><img src="https://source.unsplash.com/random/720x1280/?guitar" alt="Vídeo" class="mobile"></a>
+            <a href=""><img src="https://source.unsplash.com/random/720x1280/?violin" alt="Vídeo" class="mobile"></a>
         </div>
     <section id="conteudoDepoimentos" class="depoimentos">
         <div id="tituloDepoimentos" class="titulossessoes">
@@ -232,20 +256,15 @@
             <h1>Sobre Nós</h1>
         </div>
         <div id="imgetexto">
-
             <section class="coluna1">
                 <div id="imgSobreNos">
                     <img src="img/aquino-trompete.jpg" alt="Músico tocando trompete">
                 </div>
                 <div id="redessociais">
-                    <a href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube"
-                            style="color: #000;"></i></a>
-                    <a href="https://www.spotify.com" target="_blank"><i class="fa-brands fa-spotify"
-                            style="color: #000;"></i></a>
-                    <a href="https://www.whatsapp.com" target="_blank"><i class="fa-brands fa-whatsapp"
-                            style="color: #000;"></i></a>
-                    <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"
-                            style="color: #000;"></i></a>
+                    <a href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube" style="color: #000;"></i></a>
+                    <a href="https://www.spotify.com" target="_blank"><i class="fa-brands fa-spotify" style="color: #000;"></i></a>
+                    <a href="https://www.whatsapp.com" target="_blank"><i class="fa-brands fa-whatsapp" style="color: #000;"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram" style="color: #000;"></i></a>
                 </div>
             </section>
             <section class="coluna2">

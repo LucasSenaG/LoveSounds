@@ -391,6 +391,7 @@ footer img {
 }
 
 .contato {
+    width: 100%;
     background: url('../img/aquino-trompete.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -448,6 +449,10 @@ footer img {
             display: flex;
         }
 
+        .desktop {
+            display: none;
+        }
+
         nav {
             width: 100%;
         }
@@ -456,6 +461,12 @@ footer img {
             display: flex;
             justify-content: space-between;
             width: 100%;
+        }
+
+        nav #menu #logoNavegacao {
+            position: absolute;
+            left: 2vw;
+            height: 15vh;
         }
 
         nav #menu h4 {
@@ -492,8 +503,9 @@ footer img {
             width: 45vw;
             height: 35vh;
             position: absolute;
-            z-index: 1;
+            z-index: 3;
             background-color: #BF8C8C;
+            top: 8vh;
             right: 0;
             animation: entradaMenu 1s ease;
         }
@@ -534,15 +546,78 @@ footer img {
 
         #conteudoHome .centralizarFrase h1 {
             letter-spacing: 0px;
-            font-size: x-large;
+            font-size: large;
         }
 
         footer {
             bottom: 3vh;
+            gap: 3vw;
         }
 
         footer img {
             margin: 0 5vw;
+        }
+
+        #videos .mobile {
+            display: flex;
+        }
+
+        .titulossessoes {
+            padding: 6vh 0;
+            width: 40vw;
+        }
+
+        .depoimentos a {
+            width: 85vw;
+        }
+
+        .sobre .titulossessoes h1 {
+            width: 100vw;
+        }
+
+        .sobre .coluna1 #imgSobreNos {
+            width: 100%;
+            height: 60%;
+        }
+
+        .sobre .coluna1 #imgSobreNos img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .sobre .coluna1 #redessociais {
+            width: 100%;
+        }
+
+        .sobre .coluna1 #redessociais i {
+            font-size: 25px;
+        }
+
+        .sobre #imgetexto .coluna2 h5 {
+            height: 60%;
+            overflow: auto;
+        }
+
+        .sobre #imgetexto .coluna2 p {
+            font-size: small;
+        }
+
+        .contato #contato   {
+            width: 50%;
+            font-size: small;
+        }
+
+        #contato #telefone, #email {
+            font-size: small;
+        }
+
+        .contato #telefoneLogo #logoContato img {
+            height: 20vh;
+        }
+
+        .contato #telefoneLogo #contato {
+            border: 0;
         }
     }
 }
