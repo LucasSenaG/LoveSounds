@@ -113,3 +113,11 @@ controls.forEach((control) => {
   });
 });
 
+
+//ALTURA DA PÁGINA
+function coletaAlturaUsuario(){
+  let alturaPagina = document.documentElement.scrollTop;
+  console.log ("Altura da página é:" + alturaPagina + "Pixels.");
+}
+
+setInterval (coletaAlturaUsuario, 1000);
