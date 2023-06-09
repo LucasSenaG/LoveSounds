@@ -122,14 +122,21 @@ swiper-slide img {
     display: flex;
     height: 30vh;
     width: 100%;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
     gap: 4vw;
     margin-top: 5vh;
-    overflow: hidden;
 }
+
 
 #videos a {
     display: flex;
+    justify-content: center;
+}
+
+#videos a img {
+    height: 23vh;
+    object-fit: cover;
 }
 
 .sobre {
@@ -207,15 +214,14 @@ section h1 {
 
 .depoimentos #carrosselDepoimentos .cardDepoimento {
     width: 500px;
-    border: 2px solid red;
     margin-top: 50px;
 }
 
 .depoimentos #botaolink {
     width: 100vw;
     position: relative;
-    margin-top: 10vw;
     display: flex;
+    margin-top: 3vh;
     justify-content: center;
     align-items: center;
 }
@@ -241,7 +247,6 @@ section h1 {
     height: 100%;
     padding-top: 12vh;
     overflow: hidden;
-    background-color: green;
 }
 
 .carousel-container {
@@ -558,6 +563,10 @@ footer img {
             margin: 0 5vw;
         }
 
+        #videos .desktop {
+            display: none;
+        }
+
         #videos .mobile {
             display: flex;
         }
@@ -569,6 +578,51 @@ footer img {
 
         .depoimentos a {
             width: 85vw;
+        }
+
+        .depoimentos .titulossessoes {
+            margin-bottom: 5vh;
+        }
+
+        #conteudoDepoimentos>swiper-container>swiper-slide.swiper-slide-active:not(), swiper-slide.swiper-slide-prev{
+            display: none;
+        }
+
+        #conteudoDepoimentos > swiper-container > swiper-slide.swiper-slide-prev{
+            display: none;
+        }
+
+        #conteudoDepoimentos>swiper-container>swiper-slide.swiper-slide-active {
+            width: 80% !important;
+            display: flex !important;
+            width: 100% !important;
+            justify-content: center !important;
+            align-items: center !important;
+            padding: 15vw;
+        }
+
+        #conteudoDepoimentos > swiper-container {
+            overflow: auto;
+        }
+
+        #conteudoDepoimentos>swiper-container>swiper-slide:nth-child(1){
+            margin-left: -35%;
+        }
+
+        #conteudoDepoimentos>swiper-container>swiper-slide:nth-child(3){
+            margin-left: 35%;
+        }
+        
+        #conteudoDepoimentos>swiper-container>swiper-slide:nth-child(4){
+            margin-left: 35%;
+        }
+
+        #conteudoDepoimentos>swiper-container>swiper-slide:nth-child(7){
+            margin-left: -35%;
+        }
+
+        .depoimentos .swiper-wrapper swiper-slide {
+            width: 80% !important;
         }
 
         .sobre .titulossessoes h1 {
@@ -603,12 +657,13 @@ footer img {
             font-size: small;
         }
 
-        .contato #contato   {
+        .contato #contato {
             width: 50%;
             font-size: small;
         }
 
-        #contato #telefone, #email {
+        #contato #telefone,
+        #email {
             font-size: small;
         }
 

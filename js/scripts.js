@@ -43,7 +43,6 @@ function maeparTelas() {
 
 function abreHome() {
   const telas = maeparTelas();
-  console.log(telas);
   telas[0].style.opacity = 1;
   telas[1].style.opacity = 0.3;
   telas[2].style.opacity = 0.3;
@@ -115,9 +114,24 @@ controls.forEach((control) => {
 
 
 //ALTURA DA PÁGINA
-function coletaAlturaUsuario(){
+function coletaAlturaUsuario() {
   let alturaPagina = document.documentElement.scrollTop;
-  console.log ("Altura da página é:" + alturaPagina + "Pixels.");
+  console.log("Altura da página é:" + alturaPagina + "Pixels.");
+  const telas = maeparTelas();
+
+  if (alturaPagina >= 0 && alturaPagina < 965) {
+    telas[0].style.opacity = 1;
+    telas[1].style.opacity = 0.3;
+    telas[2].style.opacity = 0.3;
+    telas[3].style.opacity = 0.3;
+    telaAtual.textContent = 'home';
+  } else if (alturaPagina >= 966 && alturaPagina < 1885) {
+    telas[1].style.opacity = 1;
+    telas[0].style.opacity = 0.3;
+    telas[2].style.opacity = 0.3;
+    telas[3].style.opacity = 0.3;
+    telaAtual.textContent = 'fotos';
+  } 
 }
 
-setInterval (coletaAlturaUsuario, 1000);
+setInterval(coletaAlturaUsuario, 1000);
