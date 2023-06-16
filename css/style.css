@@ -404,9 +404,19 @@ footer img {
     height: 80vh;
 }
 
+#tituloContato {
+    margin-left: 5vw;
+    text-transform: uppercase;
+    padding: 4vh 0;
+    padding-bottom: 6vh;
+    border-bottom: 4px solid #BF8C8C;
+    width: 12vw;
+    height: 4vh;
+}
+
 #tituloContato h1 {
-    color: #e4e4e4;
-    opacity: 1;
+    color: #fff;
+    opacity: 0.9;
 }
 
 .contato #cor {
@@ -507,7 +517,7 @@ footer img {
             justify-content: center;
             width: 45vw;
             height: 35vh;
-            position: absolute;
+            position: fixed;
             z-index: 3;
             background-color: #BF8C8C;
             top: 8vh;
@@ -534,9 +544,10 @@ footer img {
             height: 3vh;
         }
 
-        .linhaMenuMobile h4 {
+        .linhaMenuMobile h4 a {
             color: #F4F8DC;
             text-transform: uppercase;
+            text-decoration: none;
         }
 
         @keyframes entradaMenu {

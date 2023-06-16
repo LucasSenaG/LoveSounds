@@ -41,41 +41,65 @@ function maeparTelas() {
   return telas;
 }
 
-function abreHome() {
-  const telas = maeparTelas();
-  telas[0].style.opacity = 1;
-  telas[1].style.opacity = 0.3;
-  telas[2].style.opacity = 0.3;
-  telas[3].style.opacity = 0.3;
-  telaAtual.textContent = 'home';
+function calculasessaoatual() {
+  // Obtém a referência para a seção
+  const section = document.querySelector('section');
+
+  // Obtém a distância entre o topo da seção e o topo da página em pixels
+  const sectionTopPixels = section.offsetTop - document.documentElement.getBoundingClientRect().top + window.scrollY;
+
+  // Obtém a altura da janela de visualização
+  const windowHeight = window.innerHeight;
+
+  // Calcula a distância em porcentagem
+  const sectionTopPercentage = (sectionTopPixels / windowHeight) * 100;
+
+  console.log('Distância entre o topo da seção e o topo da página em porcentagem:', sectionTopPercentage);
+
+  //Home = 0 
+  //Foto = 199
+  //Depoimento = 389 
+  //Sobre Nós = 560 
+
+  if (sectionTopPercentage >= 0) {
+    const telas = maeparTelas();
+    telas[0].style.opacity = 1;
+    telas[1].style.opacity = 0.3;
+    telas[2].style.opacity = 0.3;
+    telas[3].style.opacity = 0.3;
+    telaAtual.textContent = 'home';
+  }
+
+  if (sectionTopPercentage >= 180) {
+    const telas = maeparTelas();
+    telas[1].style.opacity = 1;
+    telas[0].style.opacity = 0.3;
+    telas[2].style.opacity = 0.3;
+    telas[3].style.opacity = 0.3;
+    telaAtual.textContent = 'fotos';
+  }
+
+  if (sectionTopPercentage >= 365) {
+    const telas = maeparTelas();
+    telas[2].style.opacity = 1;
+    telas[0].style.opacity = 0.3;
+    telas[1].style.opacity = 0.3;
+    telas[3].style.opacity = 0.3;
+    telaAtual.textContent = 'depoimentos';
+  }
+
+  if (sectionTopPercentage >= 550) {
+    const telas = maeparTelas();
+    telas[3].style.opacity = 1;
+    telas[0].style.opacity = 0.3;
+    telas[1].style.opacity = 0.3;
+    telas[2].style.opacity = 0.3;
+    telaAtual.textContent = 'Sobre Nós';
+  }
+
 }
 
-function abreFotos() {
-  const telas = maeparTelas();
-  telas[1].style.opacity = 1;
-  telas[0].style.opacity = 0.3;
-  telas[2].style.opacity = 0.3;
-  telas[3].style.opacity = 0.3;
-  telaAtual.textContent = 'fotos';
-}
-
-function abreDepoimentos() {
-  const telas = maeparTelas();
-  telas[2].style.opacity = 1;
-  telas[0].style.opacity = 0.3;
-  telas[1].style.opacity = 0.3;
-  telas[3].style.opacity = 0.3;
-  telaAtual.textContent = 'depoimentos';
-}
-
-function abreSobre() {
-  const telas = maeparTelas();
-  telas[3].style.opacity = 1;
-  telas[0].style.opacity = 0.3;
-  telas[1].style.opacity = 0.3;
-  telas[2].style.opacity = 0.3;
-  telaAtual.textContent = 'Sobre Nós';
-}
+setInterval(calculasessaoatual, 500);
 
 // CARROSSEL FOTOS
 const controls = document.querySelectorAll(".control");
@@ -112,26 +136,62 @@ controls.forEach((control) => {
   });
 });
 
+function calculasessaoatual() {
+  // Obtém a referência para a seção
+  const section = document.querySelector('section');
 
-//ALTURA DA PÁGINA
-function coletaAlturaUsuario() {
-  let alturaPagina = document.documentElement.scrollTop;
-  console.log("Altura da página é:" + alturaPagina + "Pixels.");
-  const telas = maeparTelas();
+  // Obtém a distância entre o topo da seção e o topo da página em pixels
+  const sectionTopPixels = section.offsetTop - document.documentElement.getBoundingClientRect().top + window.scrollY;
 
-  if (alturaPagina >= 0 && alturaPagina < 965) {
+  // Obtém a altura da janela de visualização
+  const windowHeight = window.innerHeight;
+
+  // Calcula a distância em porcentagem
+  const sectionTopPercentage = (sectionTopPixels / windowHeight) * 100;
+
+  console.log('Distância entre o topo da seção e o topo da página em porcentagem:', sectionTopPercentage);
+
+  //Home = 0 
+  //Foto = 199
+  //Depoimento = 389 
+  //Sobre Nós = 560 
+
+  if (sectionTopPercentage >= 0) {
+    const telas = maeparTelas();
     telas[0].style.opacity = 1;
     telas[1].style.opacity = 0.3;
     telas[2].style.opacity = 0.3;
     telas[3].style.opacity = 0.3;
     telaAtual.textContent = 'home';
-  } else if (alturaPagina >= 966 && alturaPagina < 1885) {
+  }
+
+  if (sectionTopPercentage >= 199) {
+    const telas = maeparTelas();
     telas[1].style.opacity = 1;
     telas[0].style.opacity = 0.3;
     telas[2].style.opacity = 0.3;
     telas[3].style.opacity = 0.3;
     telaAtual.textContent = 'fotos';
-  } 
+  }
+
+  if (sectionTopPercentage >= 389) {
+    const telas = maeparTelas();
+    telas[2].style.opacity = 1;
+    telas[0].style.opacity = 0.3;
+    telas[1].style.opacity = 0.3;
+    telas[3].style.opacity = 0.3;
+    telaAtual.textContent = 'depoimentos';
+  }
+
+  if (sectionTopPercentage >= 560) {
+    const telas = maeparTelas();
+    telas[3].style.opacity = 1;
+    telas[0].style.opacity = 0.3;
+    telas[1].style.opacity = 0.3;
+    telas[2].style.opacity = 0.3;
+    telaAtual.textContent = 'Sobre Nós';
+  }
+
 }
 
-setInterval(coletaAlturaUsuario, 1000);
+setInterval(calculasessaoatual, 1000);
