@@ -54,7 +54,7 @@ function calculasessaoatual() {
   // Calcula a distância em porcentagem
   const sectionTopPercentage = (sectionTopPixels / windowHeight) * 100;
 
-  console.log('Distância entre o topo da seção e o topo da página em porcentagem:', sectionTopPercentage);
+  // console.log('Distância entre o topo da seção e o topo da página em porcentagem:', sectionTopPercentage);
 
   //Home = 0 
   //Foto = 199
@@ -149,7 +149,7 @@ function calculasessaoatual() {
   // Calcula a distância em porcentagem
   const sectionTopPercentage = (sectionTopPixels / windowHeight) * 100;
 
-  console.log('Distância entre o topo da seção e o topo da página em porcentagem:', sectionTopPercentage);
+  // console.log('Distância entre o topo da seção e o topo da página em porcentagem:', sectionTopPercentage);
 
   //Home = 0 
   //Foto = 199
