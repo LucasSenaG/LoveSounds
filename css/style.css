@@ -458,6 +458,74 @@ footer img {
     display: none;
 }
 
+/* Estilos para o label */
+.label-email {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.inputEmail {
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Estilos ao focar no input */
+.inputEmail:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+    outline: none;
+}
+
+/* Estilos para o placeholder */
+.inputEmail::placeholder {
+    color: #aaa;
+}
+
+.inputEmail:invalid:focus {
+    box-shadow: 0 0 8px rgba(231, 76, 60, 0.2);
+}
+
+/* Estilos adicionais para melhorias */
+.inputEmail:hover {
+    border-color: #888;
+}
+
+.inputEmail:active {
+    border-color: #555;
+}
+
+.btnEnviar {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #000;
+    background-color: #F4F8DC;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.btnEnviar:hover {
+    background-color: #f4f8dcd7;
+}
+
+.btnEnviar:active {
+    background-color: #f4f8dca8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) inset;
+}
+
+.btnEnviar:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
+
 @media (min-width: 100px) {
     @media (max-width: 650px) {
         .mobile {
@@ -668,6 +736,10 @@ footer img {
             font-size: small;
         }
 
+        .contato {
+            flex-direction: column;
+        }
+        
         .contato #contato {
             width: 50%;
             font-size: small;
@@ -685,7 +757,6 @@ footer img {
         .contato #telefoneLogo #contato {
             border: 0;
         }
-    }
 }
 
 @media (min-width: 1280px) {

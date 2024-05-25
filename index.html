@@ -55,6 +55,7 @@
                 <h4><a href="#conteudoDepoimentos">Depoimentos</a></h4>
             </div>
             <div id="menuMobileSobreNos" class="linhaMenuMobile" onclick="abreSobre()">
+
                 <img src="img/icon/violao.svg" alt="Sobre Nós" class="iconeMenuMobile">
                 <h4><a href="#conteudoSobre">Sobre nós</a></h4>
             </div>
@@ -297,6 +298,12 @@
                 <div id="email">lovesoundscontato@gmail.com</div>
             </div>
             <div id="logoContato"><img src="img/LOGO2.png" alt="Logo"></div>
+            <div id="emailParaEbook">
+                <form action="/enviarEmail.php" method="POST">
+                    <input type="email" name="email" id="email" class="inputEmail" placeholder="Digite seu e-mail aqui"required>
+                    <input type="submit" value="Receber e-book" class="btnEnviar">
+                </form>
+            </div>
         </div>
     </section>
 
