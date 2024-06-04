@@ -750,6 +750,16 @@ footer img {
             font-size: small;
         }
 
+        .contato #telefoneLogo {
+            flex-direction: column;
+        }
+
+        .contato #telefoneLogo #emailParaEbook {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
         .contato #telefoneLogo #logoContato img {
             height: 20vh;
         }
@@ -757,6 +767,12 @@ footer img {
         .contato #telefoneLogo #contato {
             border: 0;
         }
+
+        #enviarEmail{
+            display: flex;
+            flex-direction: column;
+        }
+
 }
 
 @media (min-width: 1280px) {
